@@ -49,7 +49,9 @@ Clone the repository:
 bash
 Copy code
 git clone https://github.com/shreyashgautam/COLLEGE-FEST-MANAGEMENT.git
+
 cd COLLEGE-FEST-MANAGEMENT
+
 Install dependencies: For the backend:
 
 bash
