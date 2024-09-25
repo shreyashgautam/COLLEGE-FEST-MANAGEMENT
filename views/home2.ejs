@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            background-image: url(../assets/audience-1853662_640.jpg);
+            background-size: auto;
+        }
+
+        h1 {
+            font-family: 'Indie Flower', cursive;
+            font-weight: bolder;
+            font-size: 50px;
+            color: antiquewhite;
+        }
+
+        .btn {
+            font-size: 30px;
+            font-family: "Courier New", Courier, monospace;
+            color: antiquewhite;
+            transition: 1s;
+        }
+
+        .btn:hover {
+            color: antiquewhite;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            /* Space between divs */
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .card {
+            background-color: #add8e6;
+            padding: 20px;
+            text-align: left;
+            flex: 1;
+
+            /* Ensures divs take equal space */
+            margin: 10px;
+            box-shadow: 10px 10px 12px black;
+            transition: 1s;
+        }
+
+        .card:hover {
+            box-shadow: 1px 1px 20px black;
+            transform: translateY(-10px);
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-link {
+            color: rgb(60, 61, 55);
+            text-decoration: none;
+        }
+
+        .mainn {
+            display: flex;
+            box-shadow: 10px 10px 10px black;
+
+            width: 100%;
+            height: 700px;
+        }
+
+        .mainn img {
+            width: 600px;
+            height: 700px;
+        }
+
+        .card-body img {
+            align-items: center;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .card-title {
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .card-subtitle {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: rgb(83, 15, 15);
+        }
+
+        li a {
+            color: white;
+        }
+
+        .logindiv {
+            text-decoration: none;
+        }
+
+        #log {
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .carousel-item {
+            border-radius: 20px;
+            height: 500px;
+            width: 80%;
+            align-items: center;
+            margin-left: 150px;
+        }
+
+        .carousel-item img {
+            border-radius: 20px;
+        }
+
+        .heading {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        #TAGS {
+            margin-left: 45%;
+
+        }
+
+        select {
+            width: 0px;
+        }
+
+        .hidden {
+            opacity: 0;
+
+            transition: all 2s;
+        }
+
+        .show {
+            opacity: 1;
+
+        }
+
+        .options {
+            margin-left: 170px;
+            display: flex;
+            gap: 50px;
+            cursor: pointer;
+        }
+
+        .nos {
+            background-color: rgb(223, 135, 135);
+            border-radius: 20PX;
+        }
+
+        #accommodation-select {
+            background-color: rgb(24, 23, 23);
+            color: white;
+            text-align: center;
+            font-family: 'Poppins';
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #TO-DO {
+            background-color: rgb(24, 23, 23);
+            color: white;
+            text-align: center;
+            font-family: 'Poppins';
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 200px;
+        }
+
+        #TAGS {
+            background-color: rgb(24, 23, 23);
+            color: white;
+            text-align: center;
+            font-family: 'Poppins';
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link tagg active" id="first" aria-current="page" href="#tech"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Technical</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tagg active" aria-current="page" href="#nontech"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Non-Technical</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tagg active" aria-current="page" href="#merc"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Merchandise</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link tagg active" aria-current="page" href="http://localhost:3000/about"
+                        style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">About</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link tagg active" aria-current="page" href="http://localhost:3000/contact"
+                        style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Contact
+                        Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="logindiv">
+                        <a href="http://localhost:3000/" id="log"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1 class="heading hidden" id="Upcoming">Upcoming Events</h1>
+    <div id="carouselExample" class="carousel slide hidden">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/coro1.jpg" class="d-block w-100" alt="..." height="500px" width="50%">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/coro2.jpg" class="d-block w-100" alt="..." height="500px" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/coro3.jpg" class="d-block w-100" alt="..." height="500px" width="100%">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <br>
+    <select name="tags" id="TAGS" class="hidden" style="width: 150px">
+        <option value="" style="color:rgb(249, 52, 52)">ALL</option>
+        <option value="BANDVIT" style="color:rgb(0, 255, 89)">BANDVIT</option>
+        <option value="QUBIT" style="color:rgb(233, 255, 32)">QUBIT</option>
+        <option value="DISENCO" style="color:rgb(74, 255, 234)">DISENCO</option>
+        <option value="OTHERS" style="color:rgb(28, 168, 255)">OTHERS</option>
+    </select>
+    <br><br><br><br><br><br>
+    <h1 class="heading hidden" id="tech">Technical Events</h1>
+    <div class="container">
+        <div class="card hidden BANDVIT" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Tech Innovators Summit</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary ">BANDVIT</h6>
+                <p class="card-text">
+                    A conference showcasing the latest advancements in technology with
+                    keynote speakers, panel discussions, and networking opportunities..
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 300</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 20 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 58 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 1</h5>
+                </div>
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card QUBIT hidden" style="width: 18rem">
+            <div class="card-body  ">
+                <h5 class="card-title">Cybersecurity Expo</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">QUBIT</h6>
+                <p class="card-text">
+                    A trade show and conference dedicated to cybersecurity trends,
+                    threats, and solutions. Includes vendor booths, live demonstrations,
+                    and expert talks.
+                </p>
+                <div class="cont">
+
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 150</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 6 Oct 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 100 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 1</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card BANDVIT hidden" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Artificial Intelligence Forum</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">BANDVIT</h6>
+                <p class="card-text">
+                    A forum for discussing advancements in AI and machine learning, with
+                    presentations from industry leaders, research papers, and practical
+                    applications.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 250</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 29 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 89 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 2-4</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="card hidden DISENCO" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Augmented Reality (AR) Hackathon</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">DISENCO</h6>
+                <p class="card-text">
+                    A hackathon event where participants create AR applications and
+                    solutions, with workshops, coding sessions, and competition for
+                    prizes.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 500</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 10 Oct 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 50 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 4</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card QUBIT hidden" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Robotics Workshop</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">QUBIT</h6>
+                <p class="card-text">
+                    A workshop focused on robotics technologies, including design,
+                    programming, and deployment, with hands-on sessions and
+                    project-based learning.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 400</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 17 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 19 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 1-4</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card BANDVIT hidden" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">DevOps Expo</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">BANDVIT</h6>
+                <p class="card-text">
+                    An expo focusing on DevOps practices and tools, including continuous
+                    integration/continuous deployment (CI/CD), automation, and
+                    collaboration techniques.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 350</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 12 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 18 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 4-6</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+    </div>
+
+    <!-- NON TECH -->
+    <h1 class="heading hidden" id="nontech">Non-Technical Events</h1>
+    <div class="container">
+        <div class="card OTHERS hidden" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Music Concert</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Music Club</h6>
+                <p class="card-text">
+                    A live performance by musicians or bands, showcasing a variety of
+                    genres from classical to contemporary, often held in large venues or
+                    outdoor spaces.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 350</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 19 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 69 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 4-6</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card OTHERS hidden" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title">Cultural Festival</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Kalinga Jyoti</h6>
+                <p class="card-text">
+                    An event celebrating the traditions and heritage of different
+                    cultures through performances, food, art, and crafts, often
+                    featuring live music and dance.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 50</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 29 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 89 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 1</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+        <div class="card OTHERS hidden" style="width: 18rem">
+            <div class="card-body ">
+                <h5 class="card-title">Film Festival</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">LLBBS</h6>
+                <p class="card-text">
+                    A festival featuring screenings of independent, international, or
+                    mainstream films, including premieres, panel discussions, and
+                    filmmaker Q&A sessions.
+                </p>
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 150</h5>
+                    <h5><i class="fa-regular fa-calendar-days"></i> 18 Sept 2024</h5>
+                </div>
+                <div class="cont">
+                    <p><i class="fa-solid fa-house"></i> 89 Left</p>
+                    <h5><i class="fa-solid fa-user"></i> 1-2</h5>
+                </div>
+
+            </div>
+            <a href="http://localhost:3000/pay" class="card-link" style="text-align: center;"><b>Register</b></a>
+        </div>
+    </div>
+    <h1 class="heading hidden" id="merc">Merchandise</h1>
+    <div class="container">
+        <div class="card QUBIT hidden" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title">Merchandise 1</h5>
+                <img src="./assets/map.jpg" alt="" width="300px" />
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 350</h5>
+                    <h5><i class="fa-solid fa-user-nurse"></i> Qubit</h5>
+                </div>
+                <div class="cont">
+                    <a href="http://localhost:3000/pay" class="card-link"><b>Buy</b></a>
+                    <h5><i class="fa-solid fa-user"></i> L</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="card BANDVIT hidden" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title">Merchandise 2</h5>
+                <img src="./assets/newtshirt.jpg" alt="" width="300px" />
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 350</h5>
+                    <h5><i class="fa-solid fa-user-nurse"></i> BANDVIT</h5>
+                </div>
+                <div class="cont">
+                    <a href="http://localhost:3000/pay" class="card-link"><b>Buy</b></a>
+                    <h5><i class="fa-solid fa-user"></i> S,M,L,XL</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="card Diseco hidden" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title">Merchandise 3</h5>
+                <img src="./assets/cap.jpg" alt="" width="300px" height="300px" />
+                <div class="cont">
+                    <h5><i class="fa-solid fa-rupee-sign"></i> 150</h5>
+                    <h5><i class="fa-solid fa-user-nurse"></i> Diseco</h5>
+                </div>
+                <div class="cont">
+                    <a href="http://localhost:3000/pay" class="card-link"><b>Buy</b></a>
+                    <h5><i class="fa-solid fa-user"></i> S</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a997736e89.js" crossorigin="anonymous"></script>
+    <SCRipt>
+
+        const TAGS = document.getElementById("TAGS");
+        let div = document.querySelectorAll(".card");
+        function handleSelectChange(event) {
+            const currentValue = event.target.value;
+            console.log(currentValue);
+            for (d of div) {
+                if (d.classList.contains(currentValue)) {
+                    d.classList.remove("nos");
+                    d.classList.add("s");
+                }
+                else {
+                    d.classList.remove("s");
+                    d.classList.add("nos");
+                }
+            }
+            if (currentValue == "") {
+                for (d of div) {
+                    d.classList.remove("nos");
+                }
+            }
+        }
+
+        TAGS.addEventListener("change", (event) => {
+            const currentValue = event.target.value;
+            console.log(currentValue);
+
+            for (d of div) {
+                if (d.classList.contains(currentValue)) {
+                    d.classList.remove("nos");
+
+                }
+                else {
+                    d.classList.add("nos");
+                }
+            }
+            if (currentValue == "") {
+                for (d of div) {
+                    d.classList.remove("nos");
+                }
+            }
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+        const hiddenElements = document.querySelectorAll(".hidden");
+        hiddenElements.forEach((el) =>
+            observer.observe(el)
+        );
+    </SCRipt>
+</body>
+
+</html>

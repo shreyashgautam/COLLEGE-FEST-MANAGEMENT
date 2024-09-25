@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/donation.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <style>
+        .donation-page {
+            height: 100vh;
+            width: 100%;
+
+
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            opacity: 0;
+            width: 100%;
+            color: rgba(255, 169, 32, 0.75);
+            text-align: center;
+        }
+
+        .discription {
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+        }
+
+        .form {
+            opacity: 1;
+            height: 80vh;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2rem 5rem 0 rgba(252, 162, 17, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            z-index: 10;
+        }
+
+        .form>* {
+            width: 80%;
+        }
+
+        input {
+            height: 2rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        span {
+            color: rgba(252, 162, 17);
+        }
+
+        body {
+            font-family: 'Lobster', cursive;
+            background-image: url(./assets/audience-1853662_640.jpg);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form {
+                width: 80%;
+            }
+        }
+    </style>
+    <title>Donate</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost:3000/home"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Technical</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost:3000/home"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Non-Technical</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost:3000/home"
+                            style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Merchandise</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link active" aria-current="page" href="http://localhost:3000/about"
+                        style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">About</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link active" aria-current="page" href="http://localhost:3000/contact"
+                        style="color:aliceblue; transition: 1s; font-size: 20PX; font-weight: bold; font-family: 'Courier New', Courier, monospace;">Contact
+                        Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+
+                    <button class="btn btn-outline-success" type="submit"><a href="http://localhost:3000/">LOGIN</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="donation-page">
+        <div class="form">
+            <h1 class="heading">
+                Meet Our Team
+            </h1>
+
+            <div class="discription">
+                <h3>
+                    Dipsita Rout 23BAI1234<BR>
+                    <BR>
+                    <BR>
+                    Shreyash Gautam 23BAI1587<BR>
+                    <BR><BR>
+                    Siddharth Seth 23BRS1038<BR>
+                    <BR><BR>
+                    <br>
+                </h3>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous"></script>
+    <script src="/js/donation-animations.js"></script>
+    <script>
+        const heading = document.querySelector(".heading");
+        const discription = document.querySelector(".discription");
+        const payButton = document.querySelector(".payment");
+        const container = document.querySelector(".form");
+        const timeline = new TimelineMax({ delay: 0.2 });
+
+        window.onload = () => {
+            if (window.innerWidth < 600) {
+                timeline.fromTo(container, 0.5, { width: "0%", opacity: 0 }, { width: "80%", opacity: 1 });
+            } else {
+                timeline.fromTo(container, 0.5, { width: "0%", opacity: 0 }, { width: "50%", opacity: 1 });
+            }
+            timeline.fromTo(heading, 0.5, { y: -50, opacity: 0 }, { y: 0, opacity: 1 });
+            timeline.fromTo(discription, 0.5, { opacity: 0 }, { opacity: 1 });
+            timeline.fromTo(payButton, 0.5, { opacity: 0 }, { opacity: 1 });
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
